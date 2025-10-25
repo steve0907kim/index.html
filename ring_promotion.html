@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>골든 링 | 최상의 아름다움, 영원한 약속</title>
+    <style>
+        /* 기본 스타일 및 초기화 */
+        body {
+            font-family: 'Georgia', serif; /* 고급스러운 폰트 사용 */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+            line-height: 1.6;
+        }
+
+        /* 메인 배너 (Hero Section) 스타일 */
+        .hero-section {
+            position: relative;
+            height: 100vh; /* 화면 전체 높이 */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* 배경 비디오 스타일 */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 화면을 꽉 채우도록 설정 */
+            z-index: -2;
+        }
+
+        /* 비디오 위에 어둡게 오버레이하여 텍스트 가독성 높이기 */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* 어두운 투명도 */
+            z-index: -1;
+        }
+
+        /* 메인 타이틀 텍스트 스타일 */
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 2em;
+        }
+
+        /* CTA 버튼 스타일 */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #A68E59; /* 고급스러운 골드 계열 색상 */
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 2px solid #A68E59;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: transparent;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        /* 주요 콘텐츠 섹션 스타일 */
+        .content-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            color: #A68E59;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* 비디오 갤러리 스타일 */
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 반응형 그리드 */
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .video-container {
+            overflow: hidden;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: left;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .video-caption {
+            padding: 15px;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        /* 모바일 반응형 조정 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            .hero-content p {
+                font-size: 1.2em;
+            }
+            .content-section {
+                padding: 50px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="vid01.mp4" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="hero-content">
+            <h1>빛나는 순간, 영원히 간직하세요</h1>
+            <p>최고의 세공 기술로 탄생한 당신만을 위한 골든 링 컬렉션</p>
+            <a href="#gallery" class="cta-button">컬렉션 비디오 보기</a>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <h2>우리의 약속</h2>
+        <p>
+            '골든 링'은 100년 전통의 장인 정신과 현대적인 미학이 결합된 주얼리입니다. 
+            최상급의 금과 엄선된 보석만을 사용하여, 당신의 소중한 약속이 영원히 빛날 수 있도록 섬세하게 제작합니다. 
+            단순한 장신구를 넘어, 삶의 중요한 순간을 상징하는 가치를 담았습니다.
+        </p>
+    </section>
+
+    <section id="gallery" class="content-section">
+        <h2>생생한 컬렉션 비디오</h2>
+        <div class="video-gallery">
+            
+            <div class="video-container">
+                <video controls preload="metadata">
+                    <source src="vid02.mp4" type="video/mp4">
+                    비디오를 로드할 수 없습니다.
+                </video>
+                <div class="video-caption">vid02.mp4: 섬세한 다이아몬드 세팅 클로즈업</div>
+            </div>
+
+            <div class="video-container">
+                <video controls preload="metadata">
+                    <source src="vid03.mp4" type="video/mp4">
+                    비디오를 로드할 수 없습니다.
+                </video>
+                <div class="video-caption">vid03.mp4: 일상 속 착용 모습 (슬로우 모션)</div>
+            </div>
+
+            <div class="video-container">
+                <video controls preload="metadata">
+                    <source src="vid04.mp4" type="video/mp4">
+                    비디오를 로드할 수 없습니다.
+                </video>
+                <div class="video-caption">vid04.mp4: 반지의 360도 완벽한 모습</div>
+            </div>
+
+            <div class="video-container">
+                <video controls preload="metadata">
+                    <source src="vid05.mp4" type="video/mp4">
+                    비디오를 로드할 수 없습니다.
+                </video>
+                <div class="video-caption">vid05.mp4: 특별한 순간을 위한 반지 (감성 연출)</div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 골든 링 주얼리. 모든 권리 보유.</p>
+        <p>문의: contact@goldenring.com | 02-1234-5678</p>
+    </footer>
+
+</body>
+</html>
